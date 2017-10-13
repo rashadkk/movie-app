@@ -13,6 +13,6 @@ app.get('/star_wars_episode/:episode_number?',routes.movie_single);
 
 app.get('*',routes.notFound);
 
-app.listen(3002,function(){
+app.listen(process.env.PORT||3002,function(){
     console.log('listening to the port 3002');
 });
